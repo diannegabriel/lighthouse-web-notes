@@ -173,7 +173,7 @@ Type Error - the function cannot work as it is a different class type (Array.isA
 `==` forces the two values to be the same type\
 `12 == "12"` true
 
-Falsey values:\
+Falsey values:
 ```javascript
 0 == false;
 "" == false;
@@ -250,6 +250,66 @@ for (var planet in planetMoons) {
 
 # WEEK 1 - DAY 4
 
+### First-class Object
+An object with no restrictions on its creation, destruction, or usage.\
+This includes the ability to be passed as an argument, returned from a function, and assigned to a variable.\
+
+### Function as Objects
+Functions can be stored in variables and passed around.\
+Functions can do everything that other objects can do (like having properties assigned to them).
+
+### Higher Order Functions
+Functions that take in callbacks.\
+Functions that operate on other functions, either by taking them as arguments or by returning them.\
+Example: forEach, filter
+
+### forEach
+![forEach](https://cdn.discordapp.com/attachments/857321916066168832/868864087818383441/image0.jpg)
+
+### Callback Functions
+Higher order functions\
+Functions that you send into other functions.\
+Most notable usage of having function as values.\
+Callback is when a function (reference) passed into another function (receiver).\
+Receiver function is accepting behaviour to perform by calling the callback function that it now has access to.\
+Receiver function can decide to call the callback function at any time, as many times as it wants.
+
+Why do we use callback functions?\
+Callbacks allow single-threaded operations to execute asynchronously.\
+It helps the program to be more error-free, as each function does one job versus a big chunk of code that does multiple things in one function.
+
+### Synchronous and Asynchronous Programming
+
+Synchronous calls are coordinated; the call doesn't return until the sub-computation is finished.\
+Asynchronous calls don't give you coordination, so you need a callback. You can't assume anything about the order in which things happen between two things that are asynchronous.
+
+### Anonymous Functions
+Functions that are often declared while being passed in as callbacks to other functions.
+
+### Arrow Functions
+Arrow functions provide a new syntax for declaring anonymous functions.\
+Arrow functions don't get assigned a value for 'this'.
+
+Code:
+```javascript
+// BEFORE: anonymous callback as function expression 
+[1,2,3].forEach(function (num) {
+  console.log('num: ', num);
+});
+
+// AFTER: anonymous callback as arrow function
+[1,2,3].forEach((num) => {
+  console.log('num: ', num);
+});
+
+// MORE REFACTORING
+[1,2,3].forEach(num => console.log('num: ', num));
+//Output: num: 1, num: 2, num: 3
+```
+
+### Vim
+Vim Cheat Sheet:\
+![Vim Cheat Sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif)
 
 ### Recursion
 
@@ -264,7 +324,3 @@ The base case is simply when the function doesn't make any recursive calls.
 ### Packages
 
 Packages are self-contained code libraries that we can install and use in our projects.
-
-### Vim
-Vim Cheat Sheet:\
-![Vim Cheat Sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif)
