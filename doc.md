@@ -1,38 +1,45 @@
 # TERMINAL COMMANDS
-#### Cloning a forked gist
-`<git clone git@gist.github.com:YOUR_FORKS_ID.git lunch>`
 
-#### Removing a directory
-rm -rf path/to/your/gist/directory
+Adding/committing/pushing files
+`git add .`
+`git commit -m "Commit message"`
+`git push origin master`
+`git status`
 
-#### List files in the directory
-ls
+Cloning a forked gist
+`git clone git@gist.github.com:YOUR_FORKS_ID.git lunch`
 
-#### List files in long format
-ls -l
+Removing a directory
+`rm -rf path/to/your/gist/directory`
 
-### List files including hidden files
-ls -a
+List files in the directory
+`ls`
+
+List files in long format
+`ls -l`
+
+List files including hidden files
+`ls -a`
 
 # WEEK 1 - DAY 1
 
 ### Gists
-What is a gist? It is another git repository.
-Except it's smaller and used for sharing smaller snippets of code.
+What is a gist? It is another git repository.\
+Except it's smaller and used for sharing smaller snippets of code.\
 Gists cannot be given names.
 
 ### Fork
-A fork is a GitHub operation.
-Where a user creates their own copy of another GitHub's user's existing repository.
-Forked repo links back to the original.
+A fork is a GitHub operation.\
+Where a user creates their own copy of another GitHub's user's existing repository.\
+Forked repo links back to the original.\
 However the forked one is fully controllable by the user that created that fork.
 
-Command on terminal:
-git clone git@gist.github.com:YOUR_FORKS_ID.git lunch
+Command on terminal:\
+`git clone git@gist.github.com:YOUR_FORKS_ID.git lunch`
 
-git clone - command
-git@gist.github.com:YOUR_FORKS_ID.git - SSH
-lunch - directory name
+command - git clone\
+SSH link - git@gist.github.com:YOUR_FORKS_ID.git\
+directory name - lunch\
 
 
 ### Recursion
