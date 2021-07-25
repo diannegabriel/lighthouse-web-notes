@@ -114,7 +114,7 @@ Shorthand for if/else conditional statement
 Syntax:\
 `condition ? exprIfTrue : exprIfFalse`
 
-if/else conditional:\
+if/else conditional:
 ```javascript
 function testNum(a) {
   let result;
@@ -126,7 +126,7 @@ function testNum(a) {
   return result;
 ```
 
-ternary operator:\
+ternary operator:
 ```javascript
 function testNum(a) {
   let result;
@@ -150,7 +150,7 @@ Global scope is available everywhere in the code.\
 Local scope would only be available within the function in which it's defined.\
 Scoping can overwrite variables
 
-Example:\
+Example:
 ```javascript
 let myGlobalVar = "global";
 
@@ -174,13 +174,79 @@ Type Error - the function cannot work as it is a different class type (Array.isA
 `12 == "12"` true
 
 Falsey values:\
-`0 == false`\
-`"" == false`\
-`null == false`\
-`undefined == false`\
-`NaN == false`\
+```javascript
+0 == false;
+"" == false;
+null == false;
+undefined == false;
+NaN == false;
+```
 
 # WEEK 1 - DAY 3
+
+### Primitive Data Types
+1. String
+2. Number
+3. Boolean
+4. Undefined
+5. Null
+6. Symbol
+
+Objects are not primitve! (arrays, objects, functions, etc)
+
+### Objects
+Objects:
+* contain key-value pairs; each key maps to a value (color: purple)
+* contain keys which are always strings
+* have unique keys; same key cannot appear twice
+* have keys point to values which can be any type (color: undefined)
+
+Bracket Notation:\
+When accessing an object property using brackets, the key must be in quotes. Otherwise it would be considered a variable name isntead of a string literal.
+
+```javascript
+const person = { firstName: "Khurram" };
+person[firstName]; // ReferenceError: firstName is not defined
+person['firstName']; // "Khurram
+```
+
+```javascript
+const person = { firstName: "Khurram" };
+const propertyName = "firstName";
+const firstName = person[propertyName]; // interpreted as person["firstName"]
+```
+
+```javascript
+const person = {
+  name: "Paul",
+  address: {
+    street: "310 W 95th",
+    city: "New York",
+    zipCode: 10027
+  }
+};
+person["address"]["city"]; // => "New York"
+```
+
+for...in loop:\
+Iterates through an object
+```javascript
+var planetMoons = {
+  mercury: 0,
+  venus: 0,
+  earth: 1,
+  mars: 2,
+  jupiter: 67,
+  saturn: 62,
+  uranus: 27,
+  neptune: 14
+};
+
+for (var planet in planetMoons) {
+  var numberOfMoons = planetMoons[planet];
+  console.log("Planet: " + planet + ", # of Moons: "+ numberOfMoons);
+}
+```
 
 # WEEK 1 - DAY 4
 
