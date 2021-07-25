@@ -1,24 +1,24 @@
 # TERMINAL COMMANDS
 
-Adding/committing/pushing files
-`git add .`
-`git commit -m "Commit message"`
-`git push origin master`
+Adding/committing/pushing files\
+`git add .`\
+`git commit -m "Commit message"`\
+`git push origin master`\
 `git status`
 
-Cloning a forked gist
+Cloning a forked gist\
 `git clone git@gist.github.com:YOUR_FORKS_ID.git lunch`
 
-Removing a directory
+Removing a directory\
 `rm -rf path/to/your/gist/directory`
 
-List files in the directory
+List files in the directory\
 `ls`
 
-List files in long format
+List files in long format\
 `ls -l`
 
-List files including hidden files
+List files including hidden files\
 `ls -a`
 
 # WEEK 1 - DAY 1
@@ -39,8 +39,13 @@ Command on terminal:\
 
 command - git clone\
 SSH link - git@gist.github.com:YOUR_FORKS_ID.git\
-directory name - lunch\
+directory name - lunch
 
+# WEEK 1 - DAY 4
+
+### Vim
+Vim Cheat Sheet:\
+![Vim Cheat Sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif)
 
 ### Recursion
 
