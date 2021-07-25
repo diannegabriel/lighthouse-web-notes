@@ -1,5 +1,13 @@
 # TERMINAL COMMANDS
 
+Creating a new repository\
+`mkdir folder && cd folder` - makes a new directory and switches to it\
+`git init` - initializes a new repo in this directory\
+Create a new repo with the same name in GitHub\
+Grab the SSH url from GitHub\
+`git remote add origin URL` - ensures that the local repo and GitHub are in sync\
+`git push -u origin master`
+
 Adding/committing/pushing files\
 `git add .`\
 `git commit -m "Commit message"`\
@@ -9,17 +17,17 @@ Adding/committing/pushing files\
 Cloning a forked gist\
 `git clone git@gist.github.com:YOUR_FORKS_ID.git lunch`
 
+Lint a program\
+`eslint app.js`\
+`eslint .`\ 
+
+List
+`ls` - list files in the directory \
+`ls -l` - list files in long format\
+`ls -a` - list files including hidden files
+
 Removing a directory\
 `rm -rf path/to/your/gist/directory`
-
-List files in the directory\
-`ls`
-
-List files in long format\
-`ls -l`
-
-List files including hidden files\
-`ls -a`
 
 # WEEK 1 - DAY 1
 
@@ -34,12 +42,20 @@ Where a user creates their own copy of another GitHub's user's existing reposito
 Forked repo links back to the original.\
 However the forked one is fully controllable by the user that created that fork.
 
-Command on terminal:\
+Terminal command:\
 `git clone git@gist.github.com:YOUR_FORKS_ID.git lunch`
 
 command - git clone\
 SSH link - git@gist.github.com:YOUR_FORKS_ID.git\
 directory name - lunch
+
+### Linting
+Linting helps us fix code inconsistencies.\
+Analyzes code to see what errors, bugs, stlistic errors, and suspicious constructs are present.
+
+Terminal command:\
+`eslint app.js`\
+`eslint .`
 
 # WEEK 1 - DAY 4
 
