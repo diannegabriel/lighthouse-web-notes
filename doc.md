@@ -1,6 +1,6 @@
 # TERMINAL COMMANDS
 
-Creating a new repository\
+Creating a new local repository and GitHub repository\
 `mkdir folder && cd folder` - makes a new directory and switches to it\
 `git init` - initializes a new repo in this directory\
 Create a new repo with the same name in GitHub\
@@ -56,6 +56,27 @@ Analyzes code to see what errors, bugs, stlistic errors, and suspicious construc
 Terminal command:\
 `eslint app.js`\
 `eslint .`
+
+### Command Line Args
+Command line arguments are strings of text passed through the CLI (terminal)\
+Simplest way of retrieving arguments in node is via the process.argv array.\
+
+VS Code syntax:\
+`const args = process.argv;`
+
+Terminal command:\
+`node app.js tom jack 43`
+
+### Library
+Library is a collection of pre-written code.
+
+### console.assert
+console.assert() method writes an error message to the console if the assertion is false.\
+`console.assert(1 === 1.1);` // => prints out "Assertion failed" to the terminal\
+
+If the assertion is true, nothing happens.
+`console.assert(1 === 1);` // => nothing happens because true
+
 
 # WEEK 1 - DAY 4
 
