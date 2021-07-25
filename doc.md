@@ -1,6 +1,6 @@
 # TERMINAL COMMANDS
 #### Cloning a forked gist
-git clone git@gist.github.com:YOUR_FORKS_ID.git lunch
+`<git clone git@gist.github.com:YOUR_FORKS_ID.git lunch>`
 
 #### Removing a directory
 rm -rf path/to/your/gist/directory
