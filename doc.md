@@ -115,20 +115,24 @@ Syntax:\
 `condition ? exprIfTrue : exprIfFalse`
 
 if/else conditional:\
-`function testNum(a) {`\
-`  let result;`\
-`  if (a > 0) {`\
-`    result = 'positive';`\
-`  } else {`\
-`    result = 'NOT positive';`\
-`  }`\
-`  return result;`
+```javascript
+function testNum(a) {
+  let result;
+  if (a > 0) {
+    result = 'positive';
+  } else {
+    result = 'NOT positive';
+  }
+  return result;
+```
 
 ternary operator:\
-`function testNum(a) {`\
-  `let result;`\
-  `a > 0 ? return 'positive' : 'NOT positive'`\
-`}`
+```javascript
+function testNum(a) {
+  let result;
+  a > 0 ? return 'positive' : 'NOT positive'
+}
+```
 
 ### Function Rules
 
@@ -147,14 +151,16 @@ Local scope would only be available within the function in which it's defined.\
 Scoping can overwrite variables
 
 Example:\
-`let myGlobalVar = "global";`\
+```javascript
+let myGlobalVar = "global";
 
-`const printMyVars = function() {`\
-`  let myLocalVar = "local";`\
-`  console.log("-- Inside printMyVars --");`\
-`  console.log("myLocalVar is:", myLocalVar);`\
-`  console.log("myGlobalVar is:", myGlobalVar);`\
-`}`
+const printMyVars = function() {
+  let myLocalVar = "local";
+  console.log("-- Inside printMyVars --");
+  console.log("myLocalVar is:", myLocalVar);
+  console.log("myGlobalVar is:", myGlobalVar);
+}
+```
 
 ### Errors
 Syntax Error - incorrect programming syntax (no ;, no +, no }, etc.)\
