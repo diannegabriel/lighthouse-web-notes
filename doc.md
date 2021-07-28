@@ -446,7 +446,9 @@ process.stdin.on('data', key => {
 // *program exits*
 
 /*
-process.stdin.on(); is a listener - it's listening for a 'data' event which is fired when a user hits enter on the keyboard. When .on() hears the event, you get to do something by supplying a callback (under the parameter 'key' which is the listener), which is console.log(`You typed ${data.toString()}`).
+process.stdin.on(); is a listener
+it's listening for a 'data' event which is fired when a user hits enter on the keyboard. 
+When .on() hears the event, you get to do something by supplying a callback (under the parameter 'key' which is the listener), which is console.log(`You typed ${data.toString()}`).
 */
 ```
 
@@ -472,4 +474,89 @@ process.stdin.on('data', key => {
 // *program exits*
 ```
 
-### Event Handling User Input
+### Readline
+The readline module provides an interface for reading data from a Readable stream (such as process.stdin) one line at a time.\
+More info: (Readline Github)[https://github.com/nodejs/node/blob/master/doc/api/readline.md]
+
+Example:
+```javascript
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('What do you think of Node.js? ', (answer) => {
+  // TODO: Log the answer in a database
+  console.log(`Thank you for your valuable feedback: ${answer}`);
+
+  rl.close();
+});
+
+/*
+Output:
+What do you think of Node.js?
+*User types 'Great!'*
+What do you think of Node.js? Great!
+Thank you for your valuable feedback: Great!
+*program exits*
+*/
+```
+
+### Asynchronous Return Value
+
+# WEEK 2 - DAY 3
+
+### Network
+A Network is when two or more computers are connected and can communicate with each other.
+
+Example:\
+Desktop connected to wireless router using cable\
+Laptop connected to wireless routing using WiFi\
+Printer connected to wireless router using cable
+
+This is a network!
+
+### LAN
+Local Area Network
+
+Example:\
+My home has a router with 5 devices connected to it.\
+My home is in its own network, which is only local to my home.
+
+### NIC
+Network Interface Card
+Acts as the ear and/or mouth of computer
+
+### WAN
+Wide Area Network
+
+### MAC Address
+Unique to each computer's NIC\
+Serves as the computer's name\
+MAC Address has 6 bytes long or 48 bits\
+00:00:AB:13:5A:2C - 6 bytes\
+You can combine 2 bytes at a time: 0000.AB13.5A2C
+
+When computers want to reach out to another device,\
+first it dials the MAC Address it wants to reach\
+then, it indicates its own MAC Address\
+lastly, the message itself
+
+### TCP
+A network protocol\
+Transmission Control Protocol\
+Provides a standard that allows machines to speak to each other.\
+TCP based communication allows two machines to establish an open channel for two-way data communication.\
+Once a connection is established, both parties can start sending and receiving data until one of them decides that it's had enough and decides to terminate the connection.
+
+### IP Address
+A specific number that one side dials to establish a connection to the other side.\
+In a way, this is the phone number in the computer networking world.
+
+### Ports
+Kind of like phone number extentions.\
+A computer can have many network-based applications running, much like how a company can have many different offices.
+
+
