@@ -263,6 +263,20 @@ Functions that take in callbacks.\
 Functions that operate on other functions, either by taking them as arguments or by returning them.\
 Example: forEach, filter
 
+```
+// coolArrowFunction is a Higher Order Function
+const coolArrowFunction = () => console.log('pouet')
+
+// doSomethingMultipleTimes is NOT a HOF
+const doSomethingMultipleTimes = (callback, nbOfTimes) => {
+  for(let i = 0; i < nbOfTimes; i++){
+    callback()
+  }
+}
+
+doSomethingMultipleTimes(coolFunction, 10)
+```
+
 ### forEach
 ![forEach](https://cdn.discordapp.com/attachments/857321916066168832/868864087818383441/image0.jpg)
 
@@ -273,6 +287,20 @@ Most notable usage of having function as values.\
 Callback is when a function (reference) passed into another function (receiver).\
 Receiver function is accepting behaviour to perform by calling the callback function that it now has access to.\
 Receiver function can decide to call the callback function at any time, as many times as it wants.
+
+```
+const coolArrowFunction = () => console.log('pouet')
+
+// doSomethingMultipleTimes needs a callback function
+const doSomethingMultipleTimes = (callback, nbOfTimes) => {
+  for(let i = 0; i < nbOfTimes; i++){
+    callback()
+  }
+}
+
+// coolArrowFunction is a Callback function
+doSomethingMultipleTimes(coolFunction, 10)
+```
 
 Why do we use callback functions?\
 Callbacks allow single-threaded operations to execute asynchronously.\
@@ -311,6 +339,10 @@ Code:
 Vim Cheat Sheet:\
 ![Vim Cheat Sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif)
 
+# WEEK 1 - DAY 5
+
+## this
+
 ### Recursion
 
 To start figuring out how to solve a problem using recursion, it's helpful to first figure out the base case and the recursive case. 
@@ -324,3 +356,28 @@ The base case is simply when the function doesn't make any recursive calls.
 ### Packages
 
 Packages are self-contained code libraries that we can install and use in our projects.
+
+# WEEK 2 - DAY 2
+
+### setTimeout()
+A function to be executed after the timer expires.
+
+Syntax:
+```
+// setTimeout(function, delay)
+// delay = 1000ms
+setTimeout(function(){ console.log("Hello"); }, 3000);
+
+setTimeout(function() { 
+  console.log("Hello"); 
+  }, 3000);
+
+// arrow function
+setTimeout(() => { 
+  console.log("Hello"); 
+  }, 3000);
+
+// Output:
+// *waits for 3 seconds*
+// Hello
+```
