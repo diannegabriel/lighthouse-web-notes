@@ -363,7 +363,7 @@ Packages are self-contained code libraries that we can install and use in our pr
 A function to be executed after the timer expires.
 
 Syntax:
-```
+```javascript
 // setTimeout(function, delay)
 // delay = 1000ms
 setTimeout(function(){ console.log("Hello"); }, 3000);
@@ -381,3 +381,95 @@ setTimeout(() => {
 // *waits for 3 seconds*
 // Hello
 ```
+
+### process.stdout.write
+Process standard output\
+Continuously prints the information as the data being retrieved and doesn't add a new line
+
+Example:
+```javascript
+setTimeout(() => { 
+  process.stdout.write("Hello"); 
+  }, 3000);
+
+// Output:
+// HelloDiannes-MacBook-Air:lighthouse-web-n
+
+// To fix the Hello and add a newline between Hello and the next prompt, add \n:
+setTimeout(() => { 
+  process.stdout.write("Hello\n"); 
+  }, 3000);
+
+// Output:
+// Hello 
+// Diannes-MacBook-Air:lighthouse-web-notes
+```
+
+### \r
+We can use the special character \r to return our cursor back to the beginning of the line that we were on.
+
+Example:
+```javascript
+process.stdout.write('hello from spinner1.js... \rheyyy\n');
+
+// Output:
+// heyyy from spinner1.js...
+// instead of hello from spinner1.js...
+```
+
+### process.stdout.write('\x07');
+This code performs a system sound when triggered
+
+### User Events
+An event is a custom piece of information about something your user does.\
+Every event is assigned to a user who triggers it and it's visible on his or her timeline along with its attributes. For example, "User clicked the buy now button" or "User filled out a form".
+
+### process.stdin.on
+Process standard input\
+Use the 'on' method on stdin to register a callback
+
+Syntax:
+```javascript
+process.stdin.on(event: string | symbol, listener: Function)
+// adds the listener function to the end of the listeners array for the event named eventName
+
+// Enter any texts ( User input)
+process.stdin.on('data', key => {
+  console.log(`You typed ${key.toString()}`);
+  process.exit();
+});
+
+// Output:
+// *User enters 'Lighthouse'*
+// Lighthouse
+// You typed Lighthouse
+// *program exits*
+
+/*
+process.stdin.on(); is a listener - it's listening for a 'data' event which is fired when a user hits enter on the keyboard. When .on() hears the event, you get to do something by supplying a callback (under the parameter 'key' which is the listener), which is console.log(`You typed ${data.toString()}`).
+*/
+```
+
+### Terminate Program
+`'\u0003'` = CTRL + C\
+`process.exit();`
+
+Example:
+```javascript
+process.stdin.on('data', key => {
+  console.log(`You typed ${key.toString()}`);
+  if (key === '\u0003') {
+    process.exit();
+  }
+});
+
+// Output:
+// *User enters 'Lighthouse'*
+// Lighthouse
+// You typed Lighthouse
+// *program will not exit automatically, as it will wait for a command that calls for termination*
+// *User presses CTRL + C
+// *program exits*
+```
+
+### Event Handling User Input
